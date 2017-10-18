@@ -5,7 +5,6 @@ cd canova-1.0
 python set_up.py install
 
 Or a simple way to use canova
-
 canova_source.py is the source code of canova python package
 import canova_source
 
