@@ -67,7 +67,7 @@ def Permutation(o,loop,k):
     	w.append(cal_observe_W(n,k))
     return w
 
-def compute_canova_p(x,y,permutation=10000,shuffle_times=100,k=2,threads=10):
+def canova(x,y,permutation=10000,shuffle_times=100,k=2,threads=10):
     data_list = list_to_data(x,y)
     o,tie=sort_data(data_list)
     w=[]
@@ -76,7 +76,7 @@ def compute_canova_p(x,y,permutation=10000,shuffle_times=100,k=2,threads=10):
             n=shuffle_Y(o,tie)
             w.append(cal_observe_W(n,k))
     else: w=[cal_observe_W(o,k)]
-    aver_w=sum(w)/len(w)
+    aver_w=float(sum(w))/float(len(w))
     #permutation
     #multiprocessing
     pool = multiprocessing.Pool(processes=threads)
@@ -92,14 +92,7 @@ def compute_canova_p(x,y,permutation=10000,shuffle_times=100,k=2,threads=10):
     count = 0
     for res in result:
 	for i in res.get():
-            #print i
 	    if i<=aver_w: count +=1
-    """
-    w=Permutation(o,permutation,k)
-    count = 0
-    for i in w:
-        if i<=aver_w: count +=1
-    """
     p=float(count)/float(permutation)
     return p
 
@@ -109,4 +102,8 @@ def list_to_data(x,y):
 	o.append(Data(int(i),int(j)))
     return o
 
-
+if __name__ == '__main__':
+    '''
+    This is a canova python package
+    '''
+    canova()
