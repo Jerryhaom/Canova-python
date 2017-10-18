@@ -1,0 +1,7 @@
+setup.py
+src/canova/__init__.py
+src/canova/canova_source.py
+src/canova.egg-info/PKG-INFO
+src/canova.egg-info/SOURCES.txt
+src/canova.egg-info/dependency_links.txt
+src/canova.egg-info/top_level.txt
