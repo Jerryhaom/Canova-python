@@ -3,8 +3,7 @@
 # Install 
 
 git clone git@github.com:Jerryhaom/Canova-python.git; 
-tar zxvf canova-python.tar.gz;
-cd canova-python;
+cd Canova-pythoncd/canova-1.0;
 python setup.py install;
 
 the source code is canova_source.py 
