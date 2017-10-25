@@ -2,8 +2,11 @@
 
 # Install 
 git clone 
+
 tar zxvf canova-python.tar.gz
+
 cd canova-python
+
 python setup.py install
 
 
